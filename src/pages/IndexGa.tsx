@@ -3,12 +3,12 @@ import Hero from "@/components/Hero";
 import img1 from "@/assets/working.avif"
 import img2 from "@/assets/img4.jpg"
 import img3 from "@/assets/img5.jpg"
+const SpeakerGallery = lazy(() => import("@/components/SpeakerGallery"));
 const LearningSection = lazy(() => import("@/components/LearningSection"));
 const DayOneSection  = lazy(() => import("@/components/DayOneSection"));
 const DayTwoSection  = lazy(() => import("@/components/DayTwoSection"));
 const ComparisonSection = lazy(() => import("@/components/ComparisonSection"));
 const AboutAarzoo    = lazy(() => import("@/components/AboutAarzoo"));
-const SpeakerGallery = lazy(() => import("@/components/SpeakerGallery"));
 const WhyMasterclassSection = lazy(() => import("@/components/WhyWorkshopSection"));
 const PainPointsSection  = lazy(() => import("@/components/PainPointsSection"));
 const AudienceFitSection = lazy(() => import("@/components/AudienceFitSection"));
@@ -27,12 +27,12 @@ export default function IndexGa() {
   return (
     <main>
       <Hero />
+      <Suspense fallback={Fallback}><SpeakerGallery /></Suspense>
       <Suspense fallback={Fallback}><LearningSection /></Suspense>
       <Suspense fallback={Fallback}><DayOneSection /></Suspense>
       <Suspense fallback={Fallback}><DayTwoSection /></Suspense>
       <Suspense fallback={Fallback}><ComparisonSection /></Suspense>
       <Suspense fallback={Fallback}><AboutAarzoo /></Suspense>
-      <Suspense fallback={Fallback}><SpeakerGallery /></Suspense>
       <Suspense fallback={Fallback}><WhyMasterclassSection /></Suspense>
       <Suspense fallback={Fallback}><PainPointsSection /></Suspense>
       <Suspense fallback={Fallback}>
